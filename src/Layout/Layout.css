@@ -7,3 +7,44 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE.txt file in the root directory of this source tree.
  */
+ .containerit{
+    background-image: url('../assets/mercedes-benz-parked-in-a-row-164634.jpg');
+    /*background-image: linear-gradient(-90deg, blue, lightblue); */
+    background-size: 100% 100%;
+}
+
+.searchButton{
+    width: '40%';
+}
+
+.labelText{
+    /* background-color: rgba(51, 170, 51, .80);
+    color: white; */
+    color: blue;
+    margin-top: 20px;
+    float: left;
+}
+
+.seearchSpace{
+    margin-right: 10px;
+}
+
+.searchWidth{
+    width: 100%;
+}
+
+.segmeentRight{
+    width: 30%;
+    background-image: linear-gradient(-90deg, white, white); 
+    align-items: center;
+    float: right;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="segmeentRight"] {
+      width: 80%;
+      float: center;
+      margin-right: 10%;
+    }
+  }

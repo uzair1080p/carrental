@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { Menu, Segment } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css';
-export default class Header extends Component {
+import './Header.css'
+export default class HeaderI extends Component {
   state = { activeItem: 'home' }
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
@@ -10,21 +11,21 @@ export default class Header extends Component {
     const { activeItem } = this.state
 
     return (
-      <div>
-      <Menu pointing secondary>
+      <div className="navbarBack">
+      <Menu className="navbarBack" pointing secondary>
         <Menu.Item
           name='home'
           active={activeItem === 'home'}
           onClick={this.handleItemClick}
         />
         <Menu.Item
-          name='messages'
-          active={activeItem === 'messages'}
+          name='cars'
+          active={activeItem === 'cars'}
           onClick={this.handleItemClick}
         />
         <Menu.Item
-          name='friends'
-          active={activeItem === 'friends'}
+          name='prices'
+          active={activeItem === 'prices'}
           onClick={this.handleItemClick}
         />
         <Menu.Menu position='right'>
@@ -36,9 +37,6 @@ export default class Header extends Component {
         </Menu.Menu>
       </Menu>
 
-      <Segment>
-        <img src='/images/wireframe/media-paragraph.png' />
-      </Segment>
     </div>    )
   }
 }
